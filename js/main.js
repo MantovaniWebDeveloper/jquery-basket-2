@@ -28,15 +28,20 @@ $(document).ready(function() {
   var template = Handlebars.compile(templateBase);
 
   var numeroGiocatori = legaBasket.length;
-  
-  Handlebars.registerHelper ( ' lista ' , function (numeroGiocatori, options) {
-     var inizioLista =  " <ul> " ;
+  console.log(numeroGiocatori);
+
+  Handlebars.registerHelper ('list', function(numeroGiocatori, options) {
+     var tagLista = "<ul>";
 
      for(var i = 0; i<numeroGiocatori ; i++){
+       console.log(i);
+       tagLista = tagLista +  "<li>"  + options.fn(numeroGiocatori[i]) +  "</li>" ;
+    }
 
-     }
-
-    return fineLista +  " </ ul> " ;
+    tagLista = tagLista +  " </ul> " ;
+    return tagLista
   });
+  var listaCodiciHtml = template(nuovoGiocatore);
+  $('#resultlistaCodici').append(listaCodiciHtml);
 
 });
