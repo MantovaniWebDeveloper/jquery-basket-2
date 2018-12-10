@@ -27,4 +27,16 @@ $(document).ready(function() {
   var templateBase = document.getElementById("contentioreGiocatori").innerHTML;
   var template = Handlebars.compile(templateBase);
 
+  var numeroGiocatori = legaBasket.length;
+  
+  Handlebars.registerHelper ( ' lista ' , function (numeroGiocatori, options) {
+     var inizioLista =  " <ul> " ;
+
+     for(var i = 0; i<numeroGiocatori ; i++){
+
+     }
+
+    return fineLista +  " </ ul> " ;
+  });
+
 });

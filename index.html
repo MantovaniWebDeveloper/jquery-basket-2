@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <aside class="resultlistaCodici">
+      <aside id="resultlistaCodici">
 
       </aside>
       <main class="resultMainDati">
@@ -17,14 +17,9 @@
       </main>
     </div>
     <script id="contentioreGiocatori" type="text/x-handlebars-template">
-      <div class="listaCodici">
-        <ul>
-          <li> {{#each people}}</li>
-        </ul>
-        <div class="mainDati">
-          {{body}}
-        </div>
-      </div>
+        {{#lista giocatori}}
+          {{{codiceUnivoco}}}
+        {{/lista}}
    </script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
