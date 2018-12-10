@@ -9,7 +9,7 @@ for (var i = 0; i <= 100; i++) {
     //queste propietà
     //Codice giocatore univoco(formato da 3 lettere maiuscole
     //casuali e tre numeri)
-    "codiceUnivoco": generaCodice(arrayNumeri, arrayLettere),
+    codiceUnivoco: generaCodice(arrayNumeri, arrayLettere),
     "puntiRealizzati": numeroRandom(2, 50),
     "rimbalzi": numeroRandom(1, 25),
     "falli": numeroRandom(1, 10)
@@ -18,30 +18,15 @@ for (var i = 0; i <= 100; i++) {
 }
 console.log(legaBasket);
 /*Questo ciclo solo per prendere uno dei codici generati*/
-for (var i = 0; i < legaBasket.length; i++) {
-//   console.log(legaBasket[i].codiceUnivoco);
-}
-/********************************************************/
-$(document).ready(function() {
 
-  var templateBase = document.getElementById("contentioreGiocatori").innerHTML;
+/********************************************************/
+
+$(document).ready(function() {
+  var templateBase = $('#contentioreGiocatori').html();
   var template = Handlebars.compile(templateBase);
 
-  var numeroGiocatori = legaBasket.length;
-  console.log(numeroGiocatori);
+  var html = template(legaBasket);
 
-  Handlebars.registerHelper ('list', function(numeroGiocatori, options) {
-     var tagLista = "<ul>";
-
-     for(var i = 0; i<numeroGiocatori ; i++){
-       console.log(i);
-       tagLista = tagLista +  "<li>"  + options.fn(numeroGiocatori[i]) +  "</li>" ;
-    }
-
-    tagLista = tagLista +  " </ul> " ;
-    return tagLista
-  });
-  var listaCodiciHtml = template(nuovoGiocatore);
-  $('#resultlistaCodici').append(listaCodiciHtml);
+  $('#resultlistaCodici').append(html);
 
 });

@@ -17,9 +17,9 @@
       </main>
     </div>
     <script id="contentioreGiocatori" type="text/x-handlebars-template">
-        {{#list legaBasket}}
-          {{codiceUnivoco}}
-        {{/list}}
+      {{#each nuovoGiocatore}}
+      {{codiceUnivoco}}
+      {{/each}}
    </script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
