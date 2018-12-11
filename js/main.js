@@ -29,7 +29,6 @@ $(document).ready(function() {
     var context = {codiceUnivoco : legaBasket[i].codiceUnivoco};
     var html    = template(context);
     $('#resultlistaCodici').append(html);
-
   }
 
 

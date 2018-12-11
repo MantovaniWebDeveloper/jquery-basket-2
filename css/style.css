@@ -12,9 +12,9 @@
 }
 #resultlistaCodici {
   float: left;
-  height: 100%;
+  height: auto;
   background-color: red;
-  width: 30%;
+  width: 20%;
 }
 .resultMainDati {
   height: 100%;
