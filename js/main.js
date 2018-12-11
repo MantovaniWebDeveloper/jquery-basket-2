@@ -22,11 +22,16 @@ console.log(legaBasket);
 /********************************************************/
 
 $(document).ready(function() {
-  var templateBase = $('#contentioreGiocatori').html();
-  var template = Handlebars.compile(templateBase);
+  for (var i = 0; i < legaBasket.length - 1; i++) {
+    console.log(legaBasket[i].codiceUnivoco);
+    var templateBase = $('#contentioreGiocatori').html();
+    var template = Handlebars.compile(templateBase);
+    var context = {codiceUnivoco : legaBasket[i].codiceUnivoco};
+    var html    = template(context);
+    $('#resultlistaCodici').append(html);
 
-  var html = template(legaBasket);
+  }
 
-  $('#resultlistaCodici').append(html);
+
 
 });

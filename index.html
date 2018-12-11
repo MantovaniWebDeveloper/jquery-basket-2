@@ -17,9 +17,11 @@
       </main>
     </div>
     <script id="contentioreGiocatori" type="text/x-handlebars-template">
-      {{#each nuovoGiocatore}}
-      {{codiceUnivoco}}
-      {{/each}}
+      <aside>
+        <ul>
+          <li id="resultlistaCodici">{{codiceUnivoco}}</li>
+        </ul>
+      </aside>
    </script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
