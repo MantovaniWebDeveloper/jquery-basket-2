@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: #000;
+  height: 100%;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.wrapHamburger {
+  display: none;
+}
+
+#menu-navigazione.menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#menu-navigazione.menu .menu-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#menu-navigazione.menu .menu-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#menu-navigazione.menu .menu-item a:hover {
+  color: #EDC81A;
+}
+
+nav i {
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.wrapResponive {
+  display: none;
+  height: 100%;
+}
+
+.wrapMenuResponsive {
+  display: none;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+}
+
+main #wrapIntro {
+  background-color: #000;
+  height: calc(100vh - 80px);
+}
+
+main #wrapIntroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%
+}
+
+.logo img {
+  max-width: 100%;
+  height: 100px;
+}
+
+.frasePromozionale h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.wrapButton {
+  padding-top: 70px;
+}
+
+.wrapButton .btnIscriviti {
+  font-size: 25px;
+  border: 4px solid #EDC81A;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 60px;
+  padding-left: 60px;
+  text-decoration: none;
+}
+
+.wrapButton .btnIscriviti:hover {
+  color: #EDC81A;
+}
+
+.wrapArrow {
+  margin-top: 70px;
+  color: #fff;
+}
+
+.wrapArrow i {
+  font-size: 60px;
+}
+
+/*******MEDIA QUERY HEADEER E WRAPINTRO*/
+@media screen and (max-width: 850px) {
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .frasePromozionale h2 {
+    font-size: 16px;
+  }
+
+  .wrapButton .btnIscriviti {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 60px;
+    padding-left: 60px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .frasePromozionale h2 {
+    font-size: 12px;
+  }
+
+  .wrapButton .btnIscriviti {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 60px;
+    padding-left: 60px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .wrapButton .btnIscriviti {
+    font-size: 15px;
+  }
+}
+
+/***************************************/
+#wrapSpiegazioneGenerale .wrapSpiegazioneGeneraleContent {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapImgKart {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 40px;
+}
+
+.wrapSpiegazioneText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  height: 100%;
+}
+
+.wrapSpiegazioneText h2 {
+  font-size: 20px;
+}
+
+.wrapSpiegazioneText ul {
+  list-style-type: none;
+}
+
+.wrapSpiegazioneText ul li {
+  margin-top: 10px;
+}
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
+}
+
+/*******MEDIA QUERY SPIEGAZIONE GENERALE*/
+@media screen and (max-width: 1231px) {
+  .wrapImgKart img {
+    width: 400px;
+    height: 300px;
+  }
+
+  .wrapSpiegazioneText h2 {
+    font-size: 18px;
+  }
+
+  .wrapSpiegazioneText {
+    font-size: 14px;
+  }
+
+  .wrapSpiegazioneText .wrapButton .btnIscriviti {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  .wrapSpiegazioneText .wrapButton .btnIscriviti {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 897px) {
+  #wrapTitoloCategoriePiloti {
+    padding-top: 40px;
+  }
+
+  #wrapSpiegazioneGenerale .wrapSpiegazioneGeneraleContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapImgKart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 20px;
+  }
+
+  .wrapImgKart img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .wrapSpiegazioneText .wrapButton {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrapSpiegazioneText h2 {
+    font-size: 16px;
+  }
+
+  .wrapSpiegazioneText {
+    font-size: 12px;
+  }
+}
+
+/***************************************/
+#categoriePiloti {
+  height: 100vh;
+  width: 100%;
+}
+
+#wrapTitoloCategoriePiloti img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapContent {
+  display: flex;
+}
+
+.wrapContent #wrapImgCat {
+  width: 40%;
+  height: 100%;
+}
+
+.wrapContent #wrapTextCat {
+  width: 60%;
+}
+
+.wrapContent #wrapTextCat p {
+  text-align: right;
+}
+
+.riga1 {
+  width: calc(100% / 4);
+  height: 100%;
+  float: left;
+}
+
+.riga1 i {
+  font-size: 40px;
+  text-align: center;
+}
+
+.riga1 img {
+  max-width: 100%;
+  height: 36px;
+}
+
+.riga1 {
+  text-align: center;
+}
+
+.yellow {
+  color: #EDC81A;
+}
+
+#wrapTextCat .wrapButton {
+  text-align: right;
+}
+
+/*******MEDIA QUERY SECTION CATEGORIE PILOTI*/
+@media screen and (max-width: 1231px) {
+  #wrapTextCat .wrapButton .btnIscriviti {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 897px) {
+  #wrapTextCat .wrapButton .btnIscriviti {
+    font-size: 12px;
+  }
+
+  #wrapTextCat p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrapContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapContent #wrapImgCat {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapContent #wrapTextCat {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .wrapContent #wrapTextCat p {
+    text-align: center;
+  }
+
+  #wrapTextCat .wrapButton {
+    text-align: center;
+  }
+}
+
+/***************************************/
+#circuiti,
+#modalita {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+
+#wrapTitoloCircuiti {
+  text-align: right;
+}
+
+#wrapTitoloCircuiti img {
+  max-width: 100%;
+  height: auto;
+}
+
+#wrapTextCircuiti {
+  width: 60%;
+  height: 100%;
+  color: #fff;
+}
+
+#wrapLogoCircuiti {
+  width: 40%;
+  height: 100%;
+}
+
+.rigaLogoCircuiti {
+  width: calc(100% / 2);
+  height: 100px;
+  float: left;
+}
+
+.rigaLogoCircuiti img {
+  max-width: 100%;
+  height: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*******MEDIA QUERY SECTION circuiti*/
+@media screen and (max-width: 998px) {
+  #wrapLogoCircuiti {
+    display: none;
+  }
+
+  #wrapTextCircuiti {
+    width: 100%;
+  }
+}
+
+/***************************************/
+#wrapModalitaContent {
+  display: flex;
+  height: 100%;
+}
+
+#wrapModalitaContent>div {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+#wrapImgRegolamento {
+  height: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#wrapImgRegolamento img {
+  max-width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#wrapPagamenti h2 {
+  font-size: 23px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#wrapPagamenti p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/*******MEDIA QUERY SECTION modalita*/
+@media screen and (max-width: 1000px) {
+  #wrapModalitaContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #wrapModalitaContent>div {
+    width: 100%;
+  }
+}
+
+/***************************************/
+footer {
+  background-color: #EDC81A;
+  height: 100px;
+}
+
+#footerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+/**ARTICOLI INTERNI **/
+.wrapArticolo {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.wrapArticolo h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.wrapArticolo p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
