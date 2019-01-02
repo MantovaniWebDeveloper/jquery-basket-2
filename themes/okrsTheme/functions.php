@@ -11,6 +11,7 @@ function ok_setup_theme(){
   register_nav_menus(array(
     'header' => 'menuHeader',
   ));
+
 }
 
 add_action('after_setup_theme','ok_setup_theme');
@@ -27,6 +28,7 @@ function ok_script(){
 }
 
 add_action('wp_enqueue_scripts','ok_script');
+
 
 
 

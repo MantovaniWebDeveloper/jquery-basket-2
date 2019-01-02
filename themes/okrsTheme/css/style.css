@@ -4,29 +4,34 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 .container {
   width: 80%;
   margin: 0 auto;
   height: 100%;
 }
-
+.main-content {
+  flex: 1;
+}
+.admin-bar header{
+  top: 30px;
+}
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
   background-color: #000;
-  height: 100%;
+  padding-top:10px;
+  padding-bottom: 10px;
 }
 
 header nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  float: left;
   height: 100%;
-}
-
-.wrapHamburger {
-  display: none;
 }
 
 #menu-navigazione.menu {
@@ -40,7 +45,6 @@ header nav {
 #menu-navigazione.menu .menu-item {
   padding-top: 10px;
   padding-bottom: 10px;
-  text-align: center;
 }
 
 #menu-navigazione.menu .menu-item a {
@@ -61,18 +65,27 @@ nav i {
   cursor: pointer;
 }
 
-.wrapResponive {
-  display: none;
-  height: 100%;
+.wrapHamburger {
+  margin-bottom: 10px;
 }
 
 .wrapMenuResponsive {
   display: none;
-  background-color: #000;
+  background-color: rgb(106, 106, 106);
   height: 100%;
   width: 100%;
+  padding: 10px;
+  border-radius: 3px;
 }
-
+.logoPic {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  line-height: 30px;
+}
+.logoPic img {
+  height: 30px;
+}
 main #wrapIntro {
   background-color: #000;
   height: calc(100vh - 80px);
@@ -169,8 +182,8 @@ main #wrapIntroContent {
 /***************************************/
 #wrapSpiegazioneGenerale .wrapSpiegazioneGeneraleContent {
   display: flex;
-  height: 100vh;
   width: 100%;
+  padding-top: 20px;
 }
 
 .wrapImgKart {
@@ -184,7 +197,7 @@ main #wrapIntroContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 14px;
+  font-size: 16px;
   height: 100%;
 }
 
@@ -220,7 +233,6 @@ main #wrapIntroContent {
   }
 
   .wrapSpiegazioneText {
-    font-size: 14px;
   }
 
   .wrapSpiegazioneText .wrapButton .btnIscriviti {
@@ -229,12 +241,20 @@ main #wrapIntroContent {
 }
 
 @media screen and (max-width: 1015px) {
+  .wrapImgKart img {
+    width: 300px;
+    height: 200px;
+  }
   .wrapSpiegazioneText .wrapButton .btnIscriviti {
     font-size: 12px;
   }
 }
 
 @media screen and (max-width: 897px) {
+  .wrapImgKart img {
+    width: 200px;
+    height: 100px;
+  }
   #wrapTitoloCategoriePiloti {
     padding-top: 40px;
   }
@@ -242,6 +262,8 @@ main #wrapIntroContent {
   #wrapSpiegazioneGenerale .wrapSpiegazioneGeneraleContent {
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .wrapImgKart {
@@ -263,6 +285,7 @@ main #wrapIntroContent {
 }
 
 @media screen and (max-width: 700px) {
+
   .wrapSpiegazioneText h2 {
     font-size: 16px;
   }
@@ -271,7 +294,7 @@ main #wrapIntroContent {
     font-size: 12px;
   }
 }
-
+*
 /***************************************/
 #categoriePiloti {
   height: 100vh;
@@ -344,7 +367,23 @@ main #wrapIntroContent {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 736px) {
+  #categoriePiloti {
+    height: 100%;
+    width: 100%;
+  }
+  #wrapTextCat .wrapButton .btnIscriviti {
+    font-size: 12px;
+  }
 
+  #wrapTextCat p {
+    font-size: 13px;
+  }
+  #wrapTextCat .wrapButton {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
 @media screen and (max-width: 700px) {
   .wrapContent {
     display: flex;
@@ -359,10 +398,6 @@ main #wrapIntroContent {
   .wrapContent #wrapTextCat {
     width: 100%;
     padding-top: 20px;
-  }
-
-  .wrapContent #wrapTextCat p {
-    text-align: center;
   }
 
   #wrapTextCat .wrapButton {
@@ -435,7 +470,9 @@ main #wrapIntroContent {
   padding-top: 100px;
   padding-bottom: 30px;
 }
-
+#wrapRegolamento {
+  padding-left: 10px;
+}
 #wrapImgRegolamento {
   height: 300px;
   padding-top: 20px;
@@ -476,7 +513,7 @@ main #wrapIntroContent {
 /***************************************/
 footer {
   background-color: #EDC81A;
-  height: 100px;
+  height: 200px;
 }
 
 #footerContent {

@@ -12,14 +12,26 @@
 </head>
 
 <body >
+  <?php if (is_home()) { ?>
+    <style type="text/css">
+      .logoPic {
+        display: none;
+      }
+    </style>
+  <?php } ?>
   <header>
     <div class="container">
       <nav>
-          <i class="fas fa-bars"></i>
+          <div class="wrapHamburger">
+            <i class="fas fa-bars"></i>
+          </div>
           <div class="wrapMenuResponsive">
             <?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
           </div>
-        </div>
+
       </nav>
+      <div class="logoPic">
+        <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/logocampionatoTEXT.png" alt="logo-campionato">
+      </div>
     </div>
   </header>

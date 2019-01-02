@@ -143,9 +143,17 @@
   <section id="modalita">
     <div class="container">
       <div id="wrapModalitaContent">
+        <div id="wrapRegolamento">
+          <h2>SCARICA IL REGOLAMENTO SPORTIVO DELL'OPEN KARTING RENTAL SERIES 2019:</h2>
+          <div id="wrapImgRegolamento">
+            <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/regolamento.png" alt="">
+          </div>
+          <h2>CONTATTI DIRETTI PER MAGGIORI
+            INFORMAZIONI:</h2>
 
+        </div>
         <div id="wrapPagamenti">
-          <?php $the_query = new WP_Query( 'cat=' ); ?>
+          <?php $the_query = new WP_Query( 'cat=10' ); ?>
           <?php while ( $the_query->have_posts() ) :
              $the_query->the_post(); ?>
 
