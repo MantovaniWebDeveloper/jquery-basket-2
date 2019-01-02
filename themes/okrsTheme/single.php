@@ -5,7 +5,7 @@
     <h2><?php the_title(); ?></h2>
     <?php the_content();
      endwhile; else: ?>
-
+     
       <p><?php _e('Nessun articolo corrisponde ai criteri di ricerca.'); ?></p>
 
     <?php endif; ?>

@@ -31,7 +31,7 @@
 
       </nav>
       <div class="logoPic">
-        <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/logocampionatoTEXT.png" alt="logo-campionato">
+        <a href="<?php echo home_url(); ?>"><img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/logocampionatoTEXT.png" alt="logo-campionato"></a>
       </div>
     </div>
   </header>
